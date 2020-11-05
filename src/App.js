@@ -1,21 +1,19 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import TeamsContainer from './containers/TeamsContainer'
+//import fetchTeams from './actions/fetchTeams'
+
 class App extends React.Component {
- 
- componentDidMount(){
-   fetch('http://localhost:3000/api/v1/teams', {
-     method: 'GET'
-   })
-   .then(response => response.json())
-   .then(teams => console.log(teams))
- }
  
   render(){
   return (
     <div className="App">
-      App
+      <TeamsContainer />
     </div>
   );
  }
 }
 
-export default App;
+export default connect()(App);
+
+
