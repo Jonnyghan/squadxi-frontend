@@ -14,7 +14,7 @@ class TeamsContainer extends React.Component{
 
         return(
             <div>
-                <TeamInput/>
+                <TeamInput/> <br/><br/>
                 <Teams teams={this.props.teams}/>
             </div>
         )
@@ -24,7 +24,7 @@ class TeamsContainer extends React.Component{
 const mapStateToProps= state => {
     return {
        teams: state.teams
-       
+
     }
 
 }
