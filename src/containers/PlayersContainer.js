@@ -7,7 +7,7 @@ class PlayersContainer extends React.Component {
     render(){
         return(
             <div>
-                <PlayerInput/>
+                <PlayerInput team={this.props.team}/>
                 <Players players={this.props.team && this.props.team.players}/>
             </div>
         )

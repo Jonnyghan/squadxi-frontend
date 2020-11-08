@@ -1,6 +1,6 @@
 import React from 'react'
-import Team from './Team'
-import{Route, Link} from 'react-router-dom'
+//import Team from './Team'
+import{Link} from 'react-router-dom'
 
 const Teams = (props) => {
    

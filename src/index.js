@@ -10,12 +10,13 @@ import {BrowserRouter as Router} from 'react-router-dom'
 //set up store
 
 
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let store = createStore(teamReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render( 
-<Provider store = {store}>
+    <Provider store = {store}>
     <Router>
         <App />
     </Router>

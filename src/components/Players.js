@@ -4,7 +4,19 @@ const Players = (props) =>{
 
     return(
         <div>
-            Players
+            <h3>Current Squad List:</h3>
+            Position Key: <br/>
+            ST = Striker <br/>
+            WM = Wide Midfielder<br/>
+            CM = Center Midfielder<br/>
+            FB = Fullback<br/>
+            CB = Centerback<br/>
+            GK = Goalkeeper<br/><br/>
+            {props.players && props.players.map(player =>
+                <div id={player.id}>
+                   <b> Name:</b> {player.name} ({player.age} yrs old)<br/>
+                  <b> Position:</b> {player.position.toUpperCase()}<br/><br/>
+                </div>)}
         </div>
     )
 }

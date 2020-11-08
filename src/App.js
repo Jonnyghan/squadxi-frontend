@@ -4,9 +4,11 @@ import TeamsContainer from './containers/TeamsContainer'
 //import fetchTeams from './actions/fetchTeams'
 
 class App extends React.Component {
- 
+  
   render(){
-  return (
+    
+    return (
+ 
     <div className="App">
       <TeamsContainer />
     </div>
