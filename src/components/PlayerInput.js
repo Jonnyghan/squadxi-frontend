@@ -30,6 +30,7 @@ class PlayerInput extends React.Component {
     render(){
         return(
             <div>
+                <h3>Register a New Player</h3>
                <form onSubmit={this.handleSubmit}>
                    <label>Name:</label>
                    <input type="text" name="name" value={this.state.name} onChange={this.handleChange}/><br/>

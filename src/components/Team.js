@@ -12,9 +12,9 @@ return (
         
         <h1>{team ? team.name: null} </h1><br/> 
        <h3> League: </h3>{team ? team.league: null} <br/> 
-        <h3>Players Registered:</h3>{team ? team.players.length: null}
         
         <PlayersContainer team={team}/>
+        <h3>Players Registered:</h3>{team ? team.players.length: null}
     </div>
 )
 

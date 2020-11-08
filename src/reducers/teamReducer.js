@@ -17,6 +17,16 @@ export default function teamReducer(state = {teams: []}, action ){
                 }
             })
             return{...state, teams: teams}
+            case 'DELETE_PLAYER':
+             
+                let teamsDelete = state.teams.map(team => {
+                   if (team.id === action.payload.id) {
+                       return action.payload
+                   } else{
+                       return team
+                   }
+               })
+            return{...state, teams: teamsDelete}
          default:
             return state
     }

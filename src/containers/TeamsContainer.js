@@ -20,6 +20,7 @@ class TeamsContainer extends React.Component{
                     <Route exact path='/teams/new' component={TeamInput}/>
                     <Route exact path='/teams/:id' render={(routerProps) => <Team {...routerProps} teams={this.props.teams}/>}/>        
                     <Route exact path='/teams' render={(routerProps) => <Teams {...routerProps} teams={this.props.teams}/>}/>
+                     
                 </Switch>
             </div>
         )

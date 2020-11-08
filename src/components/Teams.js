@@ -6,11 +6,11 @@ const Teams = (props) => {
    
     return(
         <div>
-        <h1>Registered teams</h1>
+        <h1>Registered teams:</h1>
             {props.teams.map( team => 
-            <div key={team.id}>
-                <Link to={`/teams/${team.id}`}>{team.name}</Link>
-                </div> )}
+            <li key={team.id}>
+                <b><Link to={`/teams/${team.id}`}>{team.name}</Link></b>
+                </li> )}
         </div>
     )
 }
