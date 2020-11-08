@@ -16,6 +16,10 @@ handleChange = (event) => {
 handleSubmit = (event) =>{
     event.preventDefault()
     this.props.addTeam(this.state)
+    this.setState({
+        name: '', 
+    league: ''
+    })
 }
 
     render(){

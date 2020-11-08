@@ -12,7 +12,7 @@ export const addTeam= (data) => {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(team => dispatch({type: 'ADD_ACCOUNT', payload: team}))
+        .then(team => dispatch({type: 'ADD_TEAM', payload: team}))
     }
 }
 

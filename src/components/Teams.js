@@ -1,10 +1,16 @@
 import React from 'react'
+import Team from './Team'
+import{Route, Link} from 'react-router-dom'
 
 const Teams = (props) => {
-
+   
     return(
         <div>
-            {props.teams.map( team => <li key={team.id}>{team.name}<ul>League: {team.league}</ul><ul>{team.players.length} players registered</ul></li> )}
+        <h1>Registered teams</h1>
+            {props.teams.map( team => 
+            <div key={team.id}>
+                <Link to={`/teams/${team.id}`}>{team.name}</Link>
+                </div> )}
         </div>
     )
 }
