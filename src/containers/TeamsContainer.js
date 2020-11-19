@@ -9,7 +9,7 @@ import {fetchTeams} from '../actions/fetchTeams'
 class TeamsContainer extends React.Component{
 
     componentDidMount() {
-       this.props.fetchTeams()
+       this.props.boundFetchTeams()
     }
 
     render(){
@@ -17,7 +17,7 @@ class TeamsContainer extends React.Component{
         return(
             <div>
                 <Switch>
-                    <Route exact path='/teams/new' component={TeamInput}/>
+                    <Route path='/teams/new' component={TeamInput}/>
                     <Route exact path='/teams/:id' render={(routerProps) => <Team {...routerProps} teams={this.props.teams}/>}/>        
                     <Route exact path='/teams' render={(routerProps) => <Teams {...routerProps} teams={this.props.teams}/>}/>
                      
@@ -34,5 +34,11 @@ const mapStateToProps= state => {
     }
 
 }
+
+const mapDispatchToProps = dispatch => {
+    return {
+        boundFetchTeams: () => dispatch(fetchTeams())
+    }
+}
  
-export default connect(mapStateToProps, {fetchTeams}) (TeamsContainer)  
+export default connect(mapStateToProps, mapDispatchToProps) (TeamsContainer)  

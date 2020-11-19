@@ -3,26 +3,27 @@ import {connect} from 'react-redux'
 import {addTeam} from '../actions/addTeam'
 
 class TeamInput extends React.Component {
-state = {
-    name: '', 
-    league: ''
-}
-
-handleChange = (event) => {
-    this.setState({
-        [event.target.name]: event.target.value
-    })
-}
-handleSubmit = (event) =>{
-    event.preventDefault()
-    this.props.addTeam(this.state)
-    this.setState({
+    state = {
         name: '', 
-    league: ''
-    })
-}
-
+        league: ''
+    }
+    
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+    handleSubmit = (event) =>{
+        event.preventDefault()
+        this.props.addTeam(this.state)
+        this.setState({
+            name: '', 
+            league: ''
+        })
+    }
+    
     render(){
+        
         return(
             <div>
                 Team Registration Form<br/><br/>
@@ -33,6 +34,7 @@ handleSubmit = (event) =>{
                     <input type='text'placeholder='League' value={this.state.league} name= 'league' onChange={this.handleChange}/><br/><br/>
                     <input type='submit'/>
                 </form>
+       
             </div>
         )
     }
